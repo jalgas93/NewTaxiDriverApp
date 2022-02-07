@@ -13,17 +13,20 @@ import '../taxi_driver/pages/dashboard_page.dart';
 import '../taxi_driver/pages/map_page.dart';
 import '../taxi_driver/pages/select_transport.dart';
 import '../taxi_driver/pages/taxi_page.dart';
+import '../taxi_driver/pages/transport_page.dart';
 
 class Routes {
   static const String dashboardPage = '/';
   static const String taxiPage = '/taxi-page';
   static const String mapPage = '/map-page';
   static const String selectTransport = '/select-transport';
+  static const String transportPage = '/transport-page';
   static const all = <String>{
     dashboardPage,
     taxiPage,
     mapPage,
     selectTransport,
+    transportPage,
   };
 }
 
@@ -35,6 +38,7 @@ class AppRouter extends RouterBase {
     RouteDef(Routes.taxiPage, page: TaxiPage),
     RouteDef(Routes.mapPage, page: MapPage),
     RouteDef(Routes.selectTransport, page: SelectTransport),
+    RouteDef(Routes.transportPage, page: TransportPage),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -60,6 +64,12 @@ class AppRouter extends RouterBase {
     SelectTransport: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => const SelectTransport(),
+        settings: data,
+      );
+    },
+    TransportPage: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const TransportPage(),
         settings: data,
       );
     },

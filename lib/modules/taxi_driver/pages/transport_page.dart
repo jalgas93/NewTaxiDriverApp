@@ -2,14 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:taxi_driver/modules/taxi_driver/widgets/services_card.dart';
 
-class SelectTransport extends StatefulWidget {
-  const SelectTransport({Key key}) : super(key: key);
+class TransportPage extends StatefulWidget {
+  const TransportPage({Key key}) : super(key: key);
 
   @override
-  _SelectTransportState createState() => _SelectTransportState();
+  _TransportPageState createState() => _TransportPageState();
 }
 
-class _SelectTransportState extends State<SelectTransport> {
+class _TransportPageState extends State<TransportPage> {
   List<String> urls = [
     'https://i0.wp.com/nuz.uz/uploads/posts/2018-08/1533201584_1513844050_taksi.jpg?w=696&ssl=1',
     'http://retail-loyalty.org/upload/iblock/6e9/fd7aa0db3664dc8b5cffbf26403a3338.jpg',
@@ -46,7 +46,7 @@ class _SelectTransportState extends State<SelectTransport> {
                           child: ServicesCard(urls[1], 'asd', 'adf', context),
                         ),
                         Container(
-                          child: Text('Быстрый Такси'),
+                          child: Text('Эконом'),
                           height: 80,
                           width: 80,
                         ),
@@ -55,7 +55,7 @@ class _SelectTransportState extends State<SelectTransport> {
                           child: ServicesCard(urls[3], 'asd', 'adf', context),
                         ),
                         Container(
-                          child: Text('Доставка'),
+                          child: Text('Люкс'),
                           height: 80,
                           width: 80,
                         ),
@@ -71,68 +71,60 @@ class _SelectTransportState extends State<SelectTransport> {
                           child: ServicesCard(urls[1], 'asd', 'adf', context),
                         ),
                         Container(
-                          child: Text('Семейное поездки'),
-                          height: 80,
+                          child: Text('Комфорд'),
+                          height:80,
                           width: 80,
                         ),
-                        Container(
-                          height: 80.0,
-                          child: ServicesCard(urls[3], 'asd', 'adf', context),
-                        ),
-                        Container(
-                          child: Text('Для детей'),
-                          height: 80,
-                          width: 80,
-                        ),
+
                       ],
                     ),
-                    SizedBox(
-                      height: 10.0,
-                    ),
-                    Row(
-                      children: [
-                        Container(
-                          height: 80.0,
-                          child: ServicesCard(urls[1], 'asd', 'adf', context),
-                        ),
-                        Container(
-                          child: Text('Грузовые доставки'),
-                          height: 100,
-                          width: 80,
-                        ),
-                        Container(
-                          height: 80.0,
-                          child: ServicesCard(urls[3], 'asd', 'adf', context),
-                        ),
-                        Container(
-                          child: Text('По пути'),
-                          height: 80,
-                          width: 80,
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Container(
-                          height: 80.0,
-                          child: ServicesCard(urls[1], 'asd', 'adf', context),
-                        ),
-                        Container(
-                          child: Text('Между городный'),
-                          height: 100,
-                          width: 80,
-                        ),
-                        Container(
-                          height: 80.0,
-                          child: ServicesCard(urls[3], 'asd', 'adf', context),
-                        ),
-                        Container(
-                          child: Text('Между районый'),
-                          height: 80,
-                          width: 80,
-                        ),
-                      ],
-                    ),
+                    // SizedBox(
+                    //   height: 10.0,
+                    // ),
+                    // Row(
+                    //   children: [
+                    //     Container(
+                    //       height: 80.0,
+                    //       child: ServicesCard(urls[1], 'asd', 'adf', context),
+                    //     ),
+                    //     Container(
+                    //       child: Text('Грузовые доставки'),
+                    //       height: 100,
+                    //       width: 80,
+                    //     ),
+                    //     Container(
+                    //       height: 80.0,
+                    //       child: ServicesCard(urls[3], 'asd', 'adf', context),
+                    //     ),
+                    //     Container(
+                    //       child: Text('По пути'),
+                    //       height: 80,
+                    //       width: 80,
+                    //     ),
+                    //   ],
+                    // ),
+                    // Row(
+                    //   children: [
+                    //     Container(
+                    //       height: 80.0,
+                    //       child: ServicesCard(urls[1], 'asd', 'adf', context),
+                    //     ),
+                    //     Container(
+                    //       child: Text('Между городный'),
+                    //       height: 100,
+                    //       width: 80,
+                    //     ),
+                    //     Container(
+                    //       height: 80.0,
+                    //       child: ServicesCard(urls[3], 'asd', 'adf', context),
+                    //     ),
+                    //     Container(
+                    //       child: Text('Между районый'),
+                    //       height: 80,
+                    //       width: 80,
+                    //     ),
+                    //  ],
+                   // ),
                   ],
                 ))
           ],
