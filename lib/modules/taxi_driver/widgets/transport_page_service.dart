@@ -5,7 +5,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:taxi_driver/modules/app/routing.gr.dart';
 
-Widget ServicesCard(
+Widget TransportPageServicesCard(
     String imgUrl, String serviceName, String location,BuildContext context) {
   return Card(
     margin: EdgeInsets.only(right: 22),
@@ -15,7 +15,7 @@ Widget ServicesCard(
     child: InkWell(
       onTap: () {
         ExtendedNavigator.of(context)
-            .push(Routes.transportPage);
+            .push(Routes.mapPage);
       },
       child: Container(
         decoration: BoxDecoration(
